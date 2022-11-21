@@ -58,9 +58,11 @@ class Suppliers(db.Model):
 class Categories(db.Model):
     CategoryID = db.Column(db.Integer, primary_key=True)
     CategoryName = db.Column(db.String(100), nullable=False)
-
-    def __init__(self, CategoryName):
+    Description = db.Column(db.String(100))
+    
+    def __init__(self, CategoryName,Description):
         self.CategoryName = CategoryName
+        self.Description = Description
 
 
 class Orders(db.Model):
