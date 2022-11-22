@@ -44,6 +44,7 @@ def get_all_order_details_service():
         return jsonify({"message": "Not found order_detail!"}), 404
 
 
+# update Quantity
 def update_order_detail_by_id_service(id):
     order_detail = OrderDetails.query.get(id)
     data = request.json

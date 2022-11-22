@@ -41,6 +41,7 @@ def get_all_categories_service():
     else:
         return jsonify({"message": "Not found categories!"}), 404
 
+# update CategoryName
 def update_category_by_id_service(id):
     category = Categories.query.get(id)
     data = request.json
